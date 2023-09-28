@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 
 import { TranslationService } from '../app/shared/services/translation-service';
+import { CurrencySymbolPipe } from './shared/pipes/currency-symbol-pipe';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/');
@@ -18,10 +19,13 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
+    // Components
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    // Pipes
+    CurrencySymbolPipe
   ],
   imports: [
     BrowserModule,

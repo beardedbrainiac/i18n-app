@@ -9,6 +9,10 @@ import { TranslationService } from 'src/app/shared/services/translation-service'
   styleUrls: ['./about-us.component.sass']
 })
 export class AboutUsComponent {
+
+  public currencyFormat: string = "";
+  public currencyCode: string = "";
+  public locale: string = "";
   
   constructor(
     private route: ActivatedRoute,
@@ -23,6 +27,12 @@ export class AboutUsComponent {
     .subscribe(params => {
       if (params.hasOwnProperty("lang")) {
         this.translationService.setLanguage(params["lang"]);
+      }
+      if (params.hasOwnProperty("currencyFormat")) {
+        this.currencyFormat = params["currencyFormat"];
+      } 
+      if (params.hasOwnProperty("currencyCode")) {
+        this.currencyCode = params["currencyCode"];
       }
     }
   );    

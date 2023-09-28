@@ -12,6 +12,7 @@
     <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">{{ 'aboutUs.greeting' | translate }}</h1>
         <p class="col-md-8 fs-4">{{ 'aboutUs.message' | translate }}</p>
+        <p class="col-md-8 fs-4">{{ 100.54321 | currencySymbol:currencyFormat:locale:currencyCode }}</p>
         <button class="btn btn-primary m-1" (click)="changeLanguage('en')">English</button>
         <button class="btn btn-primary m-1" (click)="changeLanguage('fr')">French</button>
     </div>

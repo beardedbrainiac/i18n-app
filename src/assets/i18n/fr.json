@@ -1,0 +1,6 @@
+{
+    "aboutUs": {
+        "greeting": "Bonjour le monde!",
+        "message": "Ceci est un exemple d'Angular i18n."
+    }
+}
